@@ -39,9 +39,45 @@ namespace RosPublicCheat
             SCOPE_BUTTON.Text = (Settings.scope == 0) ? "No , X2" : "X4 , x8";
             SHOW_FOV_BUTTON.Text = (Settings.DEBUG) ? "ON" : "OFF";
             NOCLIP_BUTTON.Text = (Settings.NoClip) ? "ON" : "OFF";
+            WALLKILL_BUTTON.Text = (Settings.passthr) ? "ON" : "OFF";
+            BOX_BUTTON.Text = (Settings.BOX) ? "ON" : "OFF";
+            NOGRASS_BUTTON.Text = (Settings.NoGrass) ? "ON" : "OFF";
+            this.PerformLayout();
+            if (Settings.menu)
+            {
+                MethodInvoker ss = delegate
+                {
+                    Visible = true;
+                    this.Show();
+                    this.TopMost = true;
+                    this.BringToFront();
+
+
+
+                };
+                this.Invoke(ss);
+            }
+            else
+            {
+                MethodInvoker sss = delegate
+                {
+                    this.Visible = false;
+                    this.Hide();
+
+                };
+                this.Invoke(sss);
+            }
+
+        }
+        static void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            Exception e = (Exception)args.ExceptionObject;
+            MessageBox.Show("Menu caught : bar is:\n"+Settings.wait+"\n\n" + e.Message + "\n\n" + "Stack:\n" + e.StackTrace);
         }
         private void Main_Load(object sender, EventArgs e)
         {
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
             this.TopMost = true;
             this.TopLevel = true;
 
@@ -54,47 +90,22 @@ namespace RosPublicCheat
 
         public void thread()
         {
-
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            currentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
             while (true)
             {
-                MethodInvoker inv = delegate
-               {
-         SetWindowPos(this.Handle, new IntPtr(-1), 0, 0, 0, 0, 0x0001 | 0x0002);
-         this.TopMost = true;
-         this.TopLevel = true;
-
-
-     };
-                if (Settings.menu)
-                    this.Invoke(inv);
-
+    
                 MethodInvoker up = delegate
-            {
-                update();
+                {
+
+                    update();
 
 
-            };
+                };
                 this.Invoke(up);
-                Thread.Sleep(100);
+                Thread.Sleep(200);
 
-                if (Settings.menu)
-                {
-                    MethodInvoker ss = delegate
-                    {
-                        this.Visible = true;
-
-                    };
-                    this.Invoke(ss);
-                }
-                else
-                {
-                    MethodInvoker sss = delegate
-                    {
-                        this.Visible = false;
-
-                    };
-                    this.Invoke(sss);
-                }
+               
             }
         }
 
@@ -175,6 +186,20 @@ namespace RosPublicCheat
                 case "NOCLIP_BUTTON":
                     Settings.NoClip = !Settings.NoClip;
                     break;
+                case "BOX_BUTTON":
+                    Settings.BOX = !Settings.BOX;
+                    break;
+                case "NOGRASS_BUTTON":
+                    Settings.NoGrass = !Settings.NoGrass;
+                    break;
+                case "WALLKILL_BUTTON":
+                    Settings.passthr = !Settings.passthr;
+                    if (Settings.passthr)
+                        Mem.WriteMemory<float>(Mem.BaseAddress + Offsets.Passthrough, -0.89999998f);
+                    else
+                        Mem.WriteMemory<float>(Mem.BaseAddress + Offsets.Passthrough, -0.500f);
+                    Thread.Sleep(100);
+                    break;
                 default:
                     break;
             }
@@ -185,12 +210,16 @@ namespace RosPublicCheat
         private void Scrolled(object sender, EventArgs e)
         {
             Settings.Distance = RANGE_AIMBOT.Value;
+            RANGE_AIMBOT.PerformLayout();
 
         }
 
         private void FOV_BAR_Scroll(object sender, EventArgs e)
         {
             Settings.FOV = FOV_BAR.Value;
+            FOV_BAR.PerformLayout();
         }
+
+        
     }
 }

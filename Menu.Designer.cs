@@ -63,33 +63,41 @@ namespace RosPublicCheat
             this.PLANE_ESP = new System.Windows.Forms.Label();
             this.TABS = new System.Windows.Forms.TabControl();
             this.ESP_TAB = new System.Windows.Forms.TabPage();
+            this.box = new System.Windows.Forms.Label();
+            this.BOX_BUTTON = new System.Windows.Forms.Button();
             this.AIMBOT_TAB = new System.Windows.Forms.TabPage();
+            this.AIMBOT_BUTTON = new System.Windows.Forms.Button();
+            this.AIMBOT = new System.Windows.Forms.Label();
+            this.SHOW_FOV_BUTTON = new System.Windows.Forms.Button();
+            this.FOV_SHOW = new System.Windows.Forms.Label();
+            this.SCOPE_BUTTON = new System.Windows.Forms.Button();
+            this.scope = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.HOLDKEY_BUTTON = new System.Windows.Forms.Button();
             this.SMARTAIM = new System.Windows.Forms.Label();
             this.SMARTAIM_BUTTON = new System.Windows.Forms.Button();
             this.FOV_BAR = new System.Windows.Forms.TrackBar();
             this.FOV_LABEL = new System.Windows.Forms.Label();
-            this.NOCLIP = new System.Windows.Forms.Label();
             this.RANGE_AIMBOT = new System.Windows.Forms.TrackBar();
-            this.NOCLIP_BUTTON = new System.Windows.Forms.Button();
             this.AIMBOT_DISTANCE = new System.Windows.Forms.Label();
+            this.NOCLIP_TAB = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.WALLKILL_BUTTON = new System.Windows.Forms.Button();
+            this.NOCLLIP_CONTROLS = new System.Windows.Forms.Label();
+            this.NOCLIP = new System.Windows.Forms.Label();
+            this.NOCLIP_BUTTON = new System.Windows.Forms.Button();
+            this.MISC_TAB = new System.Windows.Forms.TabPage();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.credit = new System.Windows.Forms.Label();
-            this.scope = new System.Windows.Forms.Label();
-            this.SCOPE_BUTTON = new System.Windows.Forms.Button();
-            this.NOCLIP_TAB = new System.Windows.Forms.TabPage();
-            this.SHOW_FOV_BUTTON = new System.Windows.Forms.Button();
-            this.FOV_SHOW = new System.Windows.Forms.Label();
-            this.AIMBOT = new System.Windows.Forms.Label();
-            this.AIMBOT_BUTTON = new System.Windows.Forms.Button();
-            this.NOCLLIP_CONTROLS = new System.Windows.Forms.Label();
+            this.NoGrassText = new System.Windows.Forms.Label();
+            this.NOGRASS_BUTTON = new System.Windows.Forms.Button();
             this.TABS.SuspendLayout();
             this.ESP_TAB.SuspendLayout();
             this.AIMBOT_TAB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FOV_BAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RANGE_AIMBOT)).BeginInit();
             this.NOCLIP_TAB.SuspendLayout();
+            this.MISC_TAB.SuspendLayout();
             this.SuspendLayout();
             // 
             // ESP_PLAYER
@@ -108,7 +116,7 @@ namespace RosPublicCheat
             this.ESP_ITEM.AutoSize = true;
             this.ESP_ITEM.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_ITEM.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_ITEM.Location = new System.Drawing.Point(425, 22);
+            this.ESP_ITEM.Location = new System.Drawing.Point(425, 19);
             this.ESP_ITEM.Name = "ESP_ITEM";
             this.ESP_ITEM.Size = new System.Drawing.Size(72, 32);
             this.ESP_ITEM.TabIndex = 1;
@@ -119,7 +127,7 @@ namespace RosPublicCheat
             this.ESP_PLAYER_DISTANCE.AutoSize = true;
             this.ESP_PLAYER_DISTANCE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_PLAYER_DISTANCE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_PLAYER_DISTANCE.Location = new System.Drawing.Point(20, 152);
+            this.ESP_PLAYER_DISTANCE.Location = new System.Drawing.Point(20, 146);
             this.ESP_PLAYER_DISTANCE.Name = "ESP_PLAYER_DISTANCE";
             this.ESP_PLAYER_DISTANCE.Size = new System.Drawing.Size(132, 32);
             this.ESP_PLAYER_DISTANCE.TabIndex = 3;
@@ -152,7 +160,7 @@ namespace RosPublicCheat
             this.ESP_ROBOT.AutoSize = true;
             this.ESP_ROBOT.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_ROBOT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_ROBOT.Location = new System.Drawing.Point(20, 217);
+            this.ESP_ROBOT.Location = new System.Drawing.Point(20, 223);
             this.ESP_ROBOT.Name = "ESP_ROBOT";
             this.ESP_ROBOT.Size = new System.Drawing.Size(63, 32);
             this.ESP_ROBOT.TabIndex = 6;
@@ -163,7 +171,7 @@ namespace RosPublicCheat
             this.ESP_ITEM_DISTANCE.AutoSize = true;
             this.ESP_ITEM_DISTANCE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_ITEM_DISTANCE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_ITEM_DISTANCE.Location = new System.Drawing.Point(425, 65);
+            this.ESP_ITEM_DISTANCE.Location = new System.Drawing.Point(425, 62);
             this.ESP_ITEM_DISTANCE.Name = "ESP_ITEM_DISTANCE";
             this.ESP_ITEM_DISTANCE.Size = new System.Drawing.Size(132, 32);
             this.ESP_ITEM_DISTANCE.TabIndex = 8;
@@ -185,7 +193,7 @@ namespace RosPublicCheat
             this.ESP_BOT_HEALTH.AutoSize = true;
             this.ESP_BOT_HEALTH.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_BOT_HEALTH.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_BOT_HEALTH.Location = new System.Drawing.Point(20, 258);
+            this.ESP_BOT_HEALTH.Location = new System.Drawing.Point(20, 264);
             this.ESP_BOT_HEALTH.Name = "ESP_BOT_HEALTH";
             this.ESP_BOT_HEALTH.Size = new System.Drawing.Size(132, 32);
             this.ESP_BOT_HEALTH.TabIndex = 15;
@@ -235,7 +243,7 @@ namespace RosPublicCheat
             this.ESP_ITEM_DISTANCE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_ITEM_DISTANCE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_ITEM_DISTANCE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_ITEM_DISTANCE_BUTTON.Location = new System.Drawing.Point(612, 65);
+            this.ESP_ITEM_DISTANCE_BUTTON.Location = new System.Drawing.Point(612, 62);
             this.ESP_ITEM_DISTANCE_BUTTON.Name = "ESP_ITEM_DISTANCE_BUTTON";
             this.ESP_ITEM_DISTANCE_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_ITEM_DISTANCE_BUTTON.TabIndex = 20;
@@ -248,7 +256,7 @@ namespace RosPublicCheat
             this.ESP_ITEM_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_ITEM_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_ITEM_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_ITEM_BUTTON.Location = new System.Drawing.Point(612, 22);
+            this.ESP_ITEM_BUTTON.Location = new System.Drawing.Point(612, 19);
             this.ESP_ITEM_BUTTON.Name = "ESP_ITEM_BUTTON";
             this.ESP_ITEM_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_ITEM_BUTTON.TabIndex = 21;
@@ -261,7 +269,7 @@ namespace RosPublicCheat
             this.ESP_BOT_HEALTH_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_BOT_HEALTH_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_BOT_HEALTH_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_BOT_HEALTH_BUTTON.Location = new System.Drawing.Point(183, 261);
+            this.ESP_BOT_HEALTH_BUTTON.Location = new System.Drawing.Point(183, 267);
             this.ESP_BOT_HEALTH_BUTTON.Name = "ESP_BOT_HEALTH_BUTTON";
             this.ESP_BOT_HEALTH_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_BOT_HEALTH_BUTTON.TabIndex = 22;
@@ -274,7 +282,7 @@ namespace RosPublicCheat
             this.ESP_BOT_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_BOT_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_BOT_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_BOT_BUTTON.Location = new System.Drawing.Point(183, 217);
+            this.ESP_BOT_BUTTON.Location = new System.Drawing.Point(183, 223);
             this.ESP_BOT_BUTTON.Name = "ESP_BOT_BUTTON";
             this.ESP_BOT_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_BOT_BUTTON.TabIndex = 23;
@@ -287,7 +295,7 @@ namespace RosPublicCheat
             this.ESP_PLAYER_DISTANCE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_PLAYER_DISTANCE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_PLAYER_DISTANCE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_PLAYER_DISTANCE_BUTTON.Location = new System.Drawing.Point(183, 155);
+            this.ESP_PLAYER_DISTANCE_BUTTON.Location = new System.Drawing.Point(183, 149);
             this.ESP_PLAYER_DISTANCE_BUTTON.Name = "ESP_PLAYER_DISTANCE_BUTTON";
             this.ESP_PLAYER_DISTANCE_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_PLAYER_DISTANCE_BUTTON.TabIndex = 24;
@@ -313,7 +321,7 @@ namespace RosPublicCheat
             this.ESP_VEHICLE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_VEHICLE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_VEHICLE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_VEHICLE_BUTTON.Location = new System.Drawing.Point(612, 120);
+            this.ESP_VEHICLE_BUTTON.Location = new System.Drawing.Point(612, 110);
             this.ESP_VEHICLE_BUTTON.Name = "ESP_VEHICLE_BUTTON";
             this.ESP_VEHICLE_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_VEHICLE_BUTTON.TabIndex = 29;
@@ -326,7 +334,7 @@ namespace RosPublicCheat
             this.ESP_VEHICLE_DISTANCE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ESP_VEHICLE_DISTANCE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ESP_VEHICLE_DISTANCE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ESP_VEHICLE_DISTANCE_BUTTON.Location = new System.Drawing.Point(612, 163);
+            this.ESP_VEHICLE_DISTANCE_BUTTON.Location = new System.Drawing.Point(612, 153);
             this.ESP_VEHICLE_DISTANCE_BUTTON.Name = "ESP_VEHICLE_DISTANCE_BUTTON";
             this.ESP_VEHICLE_DISTANCE_BUTTON.Size = new System.Drawing.Size(124, 32);
             this.ESP_VEHICLE_DISTANCE_BUTTON.TabIndex = 28;
@@ -339,7 +347,7 @@ namespace RosPublicCheat
             this.VEHICLE_DISTANCE.AutoSize = true;
             this.VEHICLE_DISTANCE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VEHICLE_DISTANCE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.VEHICLE_DISTANCE.Location = new System.Drawing.Point(425, 163);
+            this.VEHICLE_DISTANCE.Location = new System.Drawing.Point(425, 153);
             this.VEHICLE_DISTANCE.Name = "VEHICLE_DISTANCE";
             this.VEHICLE_DISTANCE.Size = new System.Drawing.Size(132, 32);
             this.VEHICLE_DISTANCE.TabIndex = 27;
@@ -350,7 +358,7 @@ namespace RosPublicCheat
             this.ESP_VEHICLE.AutoSize = true;
             this.ESP_VEHICLE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ESP_VEHICLE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ESP_VEHICLE.Location = new System.Drawing.Point(425, 120);
+            this.ESP_VEHICLE.Location = new System.Drawing.Point(425, 110);
             this.ESP_VEHICLE.Name = "ESP_VEHICLE";
             this.ESP_VEHICLE.Size = new System.Drawing.Size(109, 32);
             this.ESP_VEHICLE.TabIndex = 26;
@@ -385,6 +393,7 @@ namespace RosPublicCheat
             this.TABS.Controls.Add(this.ESP_TAB);
             this.TABS.Controls.Add(this.AIMBOT_TAB);
             this.TABS.Controls.Add(this.NOCLIP_TAB);
+            this.TABS.Controls.Add(this.MISC_TAB);
             this.TABS.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TABS.Location = new System.Drawing.Point(12, 65);
             this.TABS.Name = "TABS";
@@ -396,6 +405,8 @@ namespace RosPublicCheat
             // 
             this.ESP_TAB.BackColor = System.Drawing.Color.Black;
             this.ESP_TAB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ESP_TAB.Controls.Add(this.box);
+            this.ESP_TAB.Controls.Add(this.BOX_BUTTON);
             this.ESP_TAB.Controls.Add(this.ESP_PLAYER_DISTANCE_BUTTON);
             this.ESP_TAB.Controls.Add(this.ESP_PLAYER);
             this.ESP_TAB.Controls.Add(this.ESP_ITEM);
@@ -427,6 +438,29 @@ namespace RosPublicCheat
             this.ESP_TAB.TabIndex = 0;
             this.ESP_TAB.Text = "VISUAL";
             // 
+            // box
+            // 
+            this.box.AutoSize = true;
+            this.box.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.box.Location = new System.Drawing.Point(20, 187);
+            this.box.Name = "box";
+            this.box.Size = new System.Drawing.Size(105, 32);
+            this.box.TabIndex = 32;
+            this.box.Text = "2D BOX";
+            // 
+            // BOX_BUTTON
+            // 
+            this.BOX_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BOX_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BOX_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BOX_BUTTON.Location = new System.Drawing.Point(183, 187);
+            this.BOX_BUTTON.Name = "BOX_BUTTON";
+            this.BOX_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.BOX_BUTTON.TabIndex = 33;
+            this.BOX_BUTTON.Text = "OFF";
+            this.BOX_BUTTON.UseVisualStyleBackColor = false;
+            // 
             // AIMBOT_TAB
             // 
             this.AIMBOT_TAB.BackColor = System.Drawing.Color.Black;
@@ -450,6 +484,78 @@ namespace RosPublicCheat
             this.AIMBOT_TAB.Size = new System.Drawing.Size(769, 308);
             this.AIMBOT_TAB.TabIndex = 1;
             this.AIMBOT_TAB.Text = "AIMBOT";
+            // 
+            // AIMBOT_BUTTON
+            // 
+            this.AIMBOT_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AIMBOT_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AIMBOT_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AIMBOT_BUTTON.Location = new System.Drawing.Point(182, 23);
+            this.AIMBOT_BUTTON.Name = "AIMBOT_BUTTON";
+            this.AIMBOT_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.AIMBOT_BUTTON.TabIndex = 35;
+            this.AIMBOT_BUTTON.Text = "OFF";
+            this.AIMBOT_BUTTON.UseVisualStyleBackColor = false;
+            this.AIMBOT_BUTTON.Click += new System.EventHandler(this.Buttons_click);
+            // 
+            // AIMBOT
+            // 
+            this.AIMBOT.AutoSize = true;
+            this.AIMBOT.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AIMBOT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AIMBOT.Location = new System.Drawing.Point(19, 26);
+            this.AIMBOT.Name = "AIMBOT";
+            this.AIMBOT.Size = new System.Drawing.Size(110, 32);
+            this.AIMBOT.TabIndex = 34;
+            this.AIMBOT.Text = "AIMBOT";
+            // 
+            // SHOW_FOV_BUTTON
+            // 
+            this.SHOW_FOV_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SHOW_FOV_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SHOW_FOV_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SHOW_FOV_BUTTON.Location = new System.Drawing.Point(595, 78);
+            this.SHOW_FOV_BUTTON.Name = "SHOW_FOV_BUTTON";
+            this.SHOW_FOV_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.SHOW_FOV_BUTTON.TabIndex = 45;
+            this.SHOW_FOV_BUTTON.Text = "OFF";
+            this.SHOW_FOV_BUTTON.UseVisualStyleBackColor = false;
+            this.SHOW_FOV_BUTTON.Click += new System.EventHandler(this.Buttons_click);
+            // 
+            // FOV_SHOW
+            // 
+            this.FOV_SHOW.AutoSize = true;
+            this.FOV_SHOW.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FOV_SHOW.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.FOV_SHOW.Location = new System.Drawing.Point(420, 78);
+            this.FOV_SHOW.Name = "FOV_SHOW";
+            this.FOV_SHOW.Size = new System.Drawing.Size(146, 32);
+            this.FOV_SHOW.TabIndex = 44;
+            this.FOV_SHOW.Text = "SHOW FOV";
+            // 
+            // SCOPE_BUTTON
+            // 
+            this.SCOPE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SCOPE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SCOPE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SCOPE_BUTTON.Location = new System.Drawing.Point(595, 26);
+            this.SCOPE_BUTTON.Name = "SCOPE_BUTTON";
+            this.SCOPE_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.SCOPE_BUTTON.TabIndex = 43;
+            this.SCOPE_BUTTON.Text = "NO, x2";
+            this.SCOPE_BUTTON.UseVisualStyleBackColor = false;
+            this.SCOPE_BUTTON.Click += new System.EventHandler(this.Buttons_click);
+            // 
+            // scope
+            // 
+            this.scope.AutoSize = true;
+            this.scope.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scope.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.scope.Location = new System.Drawing.Point(420, 23);
+            this.scope.Name = "scope";
+            this.scope.Size = new System.Drawing.Size(91, 32);
+            this.scope.TabIndex = 42;
+            this.scope.Text = "SCOPE";
             // 
             // label1
             // 
@@ -524,6 +630,79 @@ namespace RosPublicCheat
             this.FOV_LABEL.TabIndex = 36;
             this.FOV_LABEL.Text = "FOV";
             // 
+            // RANGE_AIMBOT
+            // 
+            this.RANGE_AIMBOT.LargeChange = 100;
+            this.RANGE_AIMBOT.Location = new System.Drawing.Point(182, 78);
+            this.RANGE_AIMBOT.Maximum = 1000;
+            this.RANGE_AIMBOT.Name = "RANGE_AIMBOT";
+            this.RANGE_AIMBOT.Size = new System.Drawing.Size(124, 56);
+            this.RANGE_AIMBOT.SmallChange = 50;
+            this.RANGE_AIMBOT.TabIndex = 35;
+            this.RANGE_AIMBOT.Value = 10;
+            this.RANGE_AIMBOT.Scroll += new System.EventHandler(this.Scrolled);
+            // 
+            // AIMBOT_DISTANCE
+            // 
+            this.AIMBOT_DISTANCE.AutoSize = true;
+            this.AIMBOT_DISTANCE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AIMBOT_DISTANCE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AIMBOT_DISTANCE.Location = new System.Drawing.Point(19, 78);
+            this.AIMBOT_DISTANCE.Name = "AIMBOT_DISTANCE";
+            this.AIMBOT_DISTANCE.Size = new System.Drawing.Size(132, 32);
+            this.AIMBOT_DISTANCE.TabIndex = 34;
+            this.AIMBOT_DISTANCE.Text = "DISTANCE";
+            // 
+            // NOCLIP_TAB
+            // 
+            this.NOCLIP_TAB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.NOCLIP_TAB.Controls.Add(this.label3);
+            this.NOCLIP_TAB.Controls.Add(this.WALLKILL_BUTTON);
+            this.NOCLIP_TAB.Controls.Add(this.NOCLLIP_CONTROLS);
+            this.NOCLIP_TAB.Controls.Add(this.NOCLIP);
+            this.NOCLIP_TAB.Controls.Add(this.NOCLIP_BUTTON);
+            this.NOCLIP_TAB.Location = new System.Drawing.Point(4, 32);
+            this.NOCLIP_TAB.Name = "NOCLIP_TAB";
+            this.NOCLIP_TAB.Padding = new System.Windows.Forms.Padding(3);
+            this.NOCLIP_TAB.Size = new System.Drawing.Size(769, 308);
+            this.NOCLIP_TAB.TabIndex = 2;
+            this.NOCLIP_TAB.Text = "NOCLIP";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(15, 224);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 32);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "WallKill";
+            // 
+            // WALLKILL_BUTTON
+            // 
+            this.WALLKILL_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.WALLKILL_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.WALLKILL_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WALLKILL_BUTTON.Location = new System.Drawing.Point(178, 224);
+            this.WALLKILL_BUTTON.Name = "WALLKILL_BUTTON";
+            this.WALLKILL_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.WALLKILL_BUTTON.TabIndex = 36;
+            this.WALLKILL_BUTTON.Text = "OFF";
+            this.WALLKILL_BUTTON.UseVisualStyleBackColor = false;
+            this.WALLKILL_BUTTON.Click += new System.EventHandler(this.Buttons_click);
+            // 
+            // NOCLLIP_CONTROLS
+            // 
+            this.NOCLLIP_CONTROLS.AutoSize = true;
+            this.NOCLLIP_CONTROLS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NOCLLIP_CONTROLS.Location = new System.Drawing.Point(8, 98);
+            this.NOCLLIP_CONTROLS.Name = "NOCLLIP_CONTROLS";
+            this.NOCLLIP_CONTROLS.Size = new System.Drawing.Size(746, 72);
+            this.NOCLLIP_CONTROLS.TabIndex = 34;
+            this.NOCLLIP_CONTROLS.Text = "Right Control Key + Arrow Keys - Move Forward/Backward/Right/Left\r\nBack Space Key" +
+    " - Fly Up\r\nRight Shift Key - Fly Down";
+            // 
             // NOCLIP
             // 
             this.NOCLIP.AutoSize = true;
@@ -534,19 +713,6 @@ namespace RosPublicCheat
             this.NOCLIP.Size = new System.Drawing.Size(102, 32);
             this.NOCLIP.TabIndex = 32;
             this.NOCLIP.Text = "NOCLIP";
-            // 
-            // RANGE_AIMBOT
-            // 
-            this.RANGE_AIMBOT.LargeChange = 100;
-            this.RANGE_AIMBOT.Location = new System.Drawing.Point(182, 78);
-            this.RANGE_AIMBOT.Maximum = 1000;
-            this.RANGE_AIMBOT.Minimum = 10;
-            this.RANGE_AIMBOT.Name = "RANGE_AIMBOT";
-            this.RANGE_AIMBOT.Size = new System.Drawing.Size(124, 56);
-            this.RANGE_AIMBOT.SmallChange = 50;
-            this.RANGE_AIMBOT.TabIndex = 35;
-            this.RANGE_AIMBOT.Value = 10;
-            this.RANGE_AIMBOT.Scroll += new System.EventHandler(this.Scrolled);
             // 
             // NOCLIP_BUTTON
             // 
@@ -561,16 +727,17 @@ namespace RosPublicCheat
             this.NOCLIP_BUTTON.UseVisualStyleBackColor = false;
             this.NOCLIP_BUTTON.Click += new System.EventHandler(this.Buttons_click);
             // 
-            // AIMBOT_DISTANCE
+            // MISC_TAB
             // 
-            this.AIMBOT_DISTANCE.AutoSize = true;
-            this.AIMBOT_DISTANCE.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AIMBOT_DISTANCE.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AIMBOT_DISTANCE.Location = new System.Drawing.Point(19, 78);
-            this.AIMBOT_DISTANCE.Name = "AIMBOT_DISTANCE";
-            this.AIMBOT_DISTANCE.Size = new System.Drawing.Size(132, 32);
-            this.AIMBOT_DISTANCE.TabIndex = 34;
-            this.AIMBOT_DISTANCE.Text = "DISTANCE";
+            this.MISC_TAB.BackColor = System.Drawing.Color.Black;
+            this.MISC_TAB.Controls.Add(this.NoGrassText);
+            this.MISC_TAB.Controls.Add(this.NOGRASS_BUTTON);
+            this.MISC_TAB.Location = new System.Drawing.Point(4, 32);
+            this.MISC_TAB.Name = "MISC_TAB";
+            this.MISC_TAB.Padding = new System.Windows.Forms.Padding(3);
+            this.MISC_TAB.Size = new System.Drawing.Size(769, 308);
+            this.MISC_TAB.TabIndex = 3;
+            this.MISC_TAB.Text = "Misc";
             // 
             // credit
             // 
@@ -581,102 +748,30 @@ namespace RosPublicCheat
             this.credit.Name = "credit";
             this.credit.Size = new System.Drawing.Size(780, 53);
             this.credit.TabIndex = 37;
-            this.credit.Text = "ROS MULTIHACK v101 ~ by Ashesh";
+            this.credit.Text = "ROS ULTRAHACK V2.1 by Ashesh";
             // 
-            // scope
+            // NoGrassText
             // 
-            this.scope.AutoSize = true;
-            this.scope.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scope.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.scope.Location = new System.Drawing.Point(420, 23);
-            this.scope.Name = "scope";
-            this.scope.Size = new System.Drawing.Size(91, 32);
-            this.scope.TabIndex = 42;
-            this.scope.Text = "SCOPE";
+            this.NoGrassText.AutoSize = true;
+            this.NoGrassText.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoGrassText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NoGrassText.Location = new System.Drawing.Point(24, 24);
+            this.NoGrassText.Name = "NoGrassText";
+            this.NoGrassText.Size = new System.Drawing.Size(110, 32);
+            this.NoGrassText.TabIndex = 38;
+            this.NoGrassText.Text = "NoGrass";
             // 
-            // SCOPE_BUTTON
+            // NOGRASS_BUTTON
             // 
-            this.SCOPE_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SCOPE_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SCOPE_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SCOPE_BUTTON.Location = new System.Drawing.Point(595, 26);
-            this.SCOPE_BUTTON.Name = "SCOPE_BUTTON";
-            this.SCOPE_BUTTON.Size = new System.Drawing.Size(124, 32);
-            this.SCOPE_BUTTON.TabIndex = 43;
-            this.SCOPE_BUTTON.Text = "NO, x2";
-            this.SCOPE_BUTTON.UseVisualStyleBackColor = false;
-            this.SCOPE_BUTTON.Click += new System.EventHandler(this.Buttons_click);
-            // 
-            // NOCLIP_TAB
-            // 
-            this.NOCLIP_TAB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.NOCLIP_TAB.Controls.Add(this.NOCLLIP_CONTROLS);
-            this.NOCLIP_TAB.Controls.Add(this.NOCLIP);
-            this.NOCLIP_TAB.Controls.Add(this.NOCLIP_BUTTON);
-            this.NOCLIP_TAB.Location = new System.Drawing.Point(4, 32);
-            this.NOCLIP_TAB.Name = "NOCLIP_TAB";
-            this.NOCLIP_TAB.Padding = new System.Windows.Forms.Padding(3);
-            this.NOCLIP_TAB.Size = new System.Drawing.Size(769, 308);
-            this.NOCLIP_TAB.TabIndex = 2;
-            this.NOCLIP_TAB.Text = "NOCLIP";
-            // 
-            // SHOW_FOV_BUTTON
-            // 
-            this.SHOW_FOV_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SHOW_FOV_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SHOW_FOV_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SHOW_FOV_BUTTON.Location = new System.Drawing.Point(595, 78);
-            this.SHOW_FOV_BUTTON.Name = "SHOW_FOV_BUTTON";
-            this.SHOW_FOV_BUTTON.Size = new System.Drawing.Size(124, 32);
-            this.SHOW_FOV_BUTTON.TabIndex = 45;
-            this.SHOW_FOV_BUTTON.Text = "OFF";
-            this.SHOW_FOV_BUTTON.UseVisualStyleBackColor = false;
-            this.SHOW_FOV_BUTTON.Click += new System.EventHandler(this.Buttons_click);
-            // 
-            // FOV_SHOW
-            // 
-            this.FOV_SHOW.AutoSize = true;
-            this.FOV_SHOW.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FOV_SHOW.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.FOV_SHOW.Location = new System.Drawing.Point(420, 78);
-            this.FOV_SHOW.Name = "FOV_SHOW";
-            this.FOV_SHOW.Size = new System.Drawing.Size(146, 32);
-            this.FOV_SHOW.TabIndex = 44;
-            this.FOV_SHOW.Text = "SHOW FOV";
-            // 
-            // AIMBOT
-            // 
-            this.AIMBOT.AutoSize = true;
-            this.AIMBOT.Font = new System.Drawing.Font("Malgun Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AIMBOT.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AIMBOT.Location = new System.Drawing.Point(19, 26);
-            this.AIMBOT.Name = "AIMBOT";
-            this.AIMBOT.Size = new System.Drawing.Size(110, 32);
-            this.AIMBOT.TabIndex = 34;
-            this.AIMBOT.Text = "AIMBOT";
-            // 
-            // AIMBOT_BUTTON
-            // 
-            this.AIMBOT_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.AIMBOT_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AIMBOT_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AIMBOT_BUTTON.Location = new System.Drawing.Point(182, 23);
-            this.AIMBOT_BUTTON.Name = "AIMBOT_BUTTON";
-            this.AIMBOT_BUTTON.Size = new System.Drawing.Size(124, 32);
-            this.AIMBOT_BUTTON.TabIndex = 35;
-            this.AIMBOT_BUTTON.Text = "OFF";
-            this.AIMBOT_BUTTON.UseVisualStyleBackColor = false;
-            // 
-            // NOCLLIP_CONTROLS
-            // 
-            this.NOCLLIP_CONTROLS.AutoSize = true;
-            this.NOCLLIP_CONTROLS.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NOCLLIP_CONTROLS.Location = new System.Drawing.Point(8, 98);
-            this.NOCLLIP_CONTROLS.Name = "NOCLLIP_CONTROLS";
-            this.NOCLLIP_CONTROLS.Size = new System.Drawing.Size(746, 72);
-            this.NOCLLIP_CONTROLS.TabIndex = 34;
-            this.NOCLLIP_CONTROLS.Text = "Right Control Key + Arrow Keys - Move Forward/Backward/Right/Left\r\nBack Space Key" +
-    " - Fly Up\r\nRight Shift Key - Fly Down";
+            this.NOGRASS_BUTTON.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.NOGRASS_BUTTON.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NOGRASS_BUTTON.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOGRASS_BUTTON.Location = new System.Drawing.Point(187, 24);
+            this.NOGRASS_BUTTON.Name = "NOGRASS_BUTTON";
+            this.NOGRASS_BUTTON.Size = new System.Drawing.Size(124, 32);
+            this.NOGRASS_BUTTON.TabIndex = 39;
+            this.NOGRASS_BUTTON.Text = "OFF";
+            this.NOGRASS_BUTTON.UseVisualStyleBackColor = false;
             // 
             // menu
             // 
@@ -684,7 +779,7 @@ namespace RosPublicCheat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(794, 415);
+            this.ClientSize = new System.Drawing.Size(1056, 584);
             this.ControlBox = false;
             this.Controls.Add(this.credit);
             this.Controls.Add(this.TABS);
@@ -703,6 +798,8 @@ namespace RosPublicCheat
             ((System.ComponentModel.ISupportInitialize)(this.RANGE_AIMBOT)).EndInit();
             this.NOCLIP_TAB.ResumeLayout(false);
             this.NOCLIP_TAB.PerformLayout();
+            this.MISC_TAB.ResumeLayout(false);
+            this.MISC_TAB.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -756,5 +853,12 @@ namespace RosPublicCheat
         public Label AIMBOT;
         public Button AIMBOT_BUTTON;
         private Label NOCLLIP_CONTROLS;
+        private TabPage MISC_TAB;
+        public Label label3;
+        public Button WALLKILL_BUTTON;
+        public Label box;
+        public Button BOX_BUTTON;
+        public Label NoGrassText;
+        public Button NOGRASS_BUTTON;
     }
 }
